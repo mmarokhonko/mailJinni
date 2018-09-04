@@ -30,7 +30,7 @@
         </columns>
         <columns class = "date">
           <spacer size="10"></spacer>
-          <span class = "blue">DATE: </span> <span class = norm-txt-s>Nov 9, 2018</span>
+          <span class = "blue">DATE: </span> <span class = norm-txt-s>{{customer.created_at}}</span>
           <div class="blue-line"></div>
         </columns>
      </row>
@@ -41,7 +41,7 @@
     </columns>
       <columns large="9" small ="9" class = "no-l">
         <spacer size="7"></spacer>
-        <span class = norm-txt> {{ customer.first_name }}</span>
+        <span class = norm-txt> {{ customer.name }}</span>
         <div class="blue-line"></div>
     </columns>
     </row>
@@ -79,7 +79,7 @@
   <row>
     <columns>
       <center>
-        <button href="#" class="btn success expanded rounded" >GET YOUR FIRST TICKET</button>
+        <button href='https://jinnilotto.com/"language"/lotteries?init=email&email={{ customer.email }}&email_token={{ customer.email_token }}&Lang="language"&utm_campaign=welcome_email_1&utm_medium=email' class="btn success expanded rounded" >GET YOUR FIRST TICKET</button>
       </center>
     </columns>
   </row>
@@ -187,7 +187,7 @@
         <p>This e-mail may contain confidential and/or privileged information. If you are not the intended recipient (or have received this e-mail in error) please notify us immediately and destroy this e-mail. If you are the intended recipient, you can modify your notification settings.</p>
 
         <p>To ensure you receive all notifications about winnings and future emails from Jinnilotto, please add support@jinnilotto.com to your address book, to
-          <a href="" class = "under-a">unsubscribe</a> unsubscribe from our communications please click here unsubscribe.</p>
+          <a href="https://jinnilotto.com/?init=unsubscribe&email={{ customer.email }}&email_token={{ customer.email_token }}&Lang=EN&redirectUrl=/unsubscribe" class = "under-a">unsubscribe</a> unsubscribe from our communications please click here unsubscribe.</p>
 
           <p>Jinnilotto registered office: Jinni Lotto is operated by Jinni Tech Ltd of First Floor, Jubilee Building, Victoria Street, Douglas, Isle of Man, IM1 2SH</p>
       <spacer size="60"></spacer>
